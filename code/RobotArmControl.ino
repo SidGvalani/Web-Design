@@ -1,6 +1,7 @@
 /*
+Sketch displays http requests to set servo angle using a slider as html. The client will update slider during live-time, consequently updating servo angle.
 
-
+Connect servo pin to any PWM enabled pin on ESP32.
 */
 void handleBack(){
 if(server.hasArg("pos"){
@@ -21,8 +22,8 @@ void handleFront(){
              </div>
               <script>
             void updatePos(String "pos"){
-                document.getElementById().innerText = pos;
-                fetch(`/setServo?pos-${pos}`)
+                document.getElementById("pos").innerText = pos;
+                fetch(`/setServo?pos-${pos}`) // sends a request to http to 
               }
                </script>
         </body>
@@ -47,5 +48,11 @@ void handleFront(){
   Serial.print(WiFi.localIP());
   delay(1000);
 
-  
+  server.on("/",handleFront);
+  server.on("/setServo",handleBack);
+  server.begin();
  }
+
+void loop(){
+  handleClient();
+}
