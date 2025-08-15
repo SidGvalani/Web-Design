@@ -5,7 +5,7 @@ Connect servo pin to any PWM enabled pin on ESP32.
 */
 void handleBack(){
 if(server.hasArg("pos"){
-  int pos = server.Arg("pos").toInt(); // convert literal position to integer
+  int pos = server.Arg("pos").toInt(); // convert literal to integer
   servo.write(pos); // move servo to position
   server.send(200,"text/html","OK");
               }
