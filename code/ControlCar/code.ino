@@ -7,7 +7,12 @@ Sketch to control an RC Car using a web server. Sliders to control speed, and ar
 #include <WebServer.h>
 
 void clientRoot(){
-    Rrawliteral"(
+    R"rawliteral(
+<html>
+    <title>RC Car
+    </title>
+        <h1></h1>
+
   
     )rawliteral"
   
