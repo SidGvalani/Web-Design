@@ -13,7 +13,7 @@ The ESP32 hosts a webpage with a slider, and moving the slider updates the servo
 
 
 
-## 🛠 Hardware Requirements
+##  Hardware Requirements
 - ESP32 development board  
 - Servo motor (e.g., SG90 or MG995)  
 - External power supply for servo (if needed)  
